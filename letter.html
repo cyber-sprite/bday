@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Letter to You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'calibri', serif;
+      background: linear-gradient(135deg, #f8f4ff, #e0d4ff);
+      color: #4a2e6a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-y: scroll;
+    }
+
+    .letter-container {
+      max-width: 600px;
+      background-color: #fff0fb;
+      border: 2px dashed #b583d1;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin: 2rem;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #b583d1;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .back-btn {
+      margin: 1rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 2rem;
+      background-color: #b583d1;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="letter-container">
+    <h2>Hello ma babi lalabs aking labidabs sugar plum, my sunshine on a rainy day, my safe space, my giggle partner, pretty little cutie lady, ma best friend, my girlfriend, ma wuga buga bubi wigie wooshh
+💜</h2>
+
+    <p>
+      I wav you <3 </p>
+    <p>
+     Happy 20th birthday, my love. 💌
+    </p>
+    <p> MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH MWUAH  😘</p>
+  </div>
+
+  <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  <audio id="hbdAudio" src="hbd.mp3"></audio>
+
+  <script>
+    function goBack() {
+      const audio = document.getElementById('hbdAudio');
+      audio.play();
+      setTimeout(() => {
+        window.location.href = 'greeting.html';
+      }, 500);
+    }
+  </script>
+</body>
+</html>
