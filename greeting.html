@@ -33,6 +33,16 @@
       75% { transform: translateX(25vw) scale(1.1); }
       100% { transform: translateX(0vw) scale(1.2); }
     }
+    .dance {
+     animation: svgDance 1s ease-in-out infinite;
+    }
+    @keyframes svgDance {
+      0%   { transform: translateX(0) scale(1.2) rotate(0deg); }
+      25%  { transform: translateX(-10px) scale(1.25) rotate(-2deg); }
+      50%  { transform: translateX(10px) scale(1.3) rotate(2deg); }
+      75%  { transform: translateX(-10px) scale(1.25) rotate(-2deg); }
+      100% { transform: translateX(0) scale(1.2) rotate(0deg); }
+    }
 
     #message {
       font-size: 2rem;
@@ -839,12 +849,27 @@
     }, 4000);
 
     // NNNOOOO! dodge button logic for mobile (onclick instead of mouseenter)
-    function moveNoButton() {
-      const noBtn = document.getElementById("noBtn");
-      noBtn.style.position = 'absolute';
-      noBtn.style.top = Math.random() * 80 + 'vh';
-      noBtn.style.left = Math.random() * 80 + 'vw';
+  
+  const noBtn = document.getElementById("noBtn");
+  let noClickCount = 0;
+
+  noBtn.onclick = () => {
+    noClickCount++;
+    
+    // Random movement
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 80 + "vw";
+    noBtn.style.top = Math.random() * 80 + "vh";
+
+    // After 6 clicks, hide the button
+    if (noClickCount >= 6) {
+      noBtn.style.transition = "opacity 0.5s ease";
+      noBtn.style.opacity = 0;
+      setTimeout(() => noBtn.style.display = "none", 500);
     }
+  };
+
+
 
     // 🎉 Simple confetti
     function startConfetti() {
